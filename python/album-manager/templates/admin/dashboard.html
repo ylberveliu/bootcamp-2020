@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard | Online Album Manager</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    
+    <div class="container my-5">
+        <h1>Dashboard</h1>
+        <p>
+            <i class="fa fa-user"></i>
+            {{ session.get("username") }} 
+            | 
+            <a href="{{ url_for('logout') }}">
+                <i class="fa fa-sign-out"></i>
+                Logout
+            </a>
+        </p>
+        <p class="my-4">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate, labore fugiat? Aliquam perspiciatis mollitia cum, numquam eligendi, quibusdam excepturi amet repellendus quos, distinctio veniam earum enim iste dolorum! Recusandae, eaque?
+        </p>
+        <a href="{{ url_for('albums') }}" class="btn btn-outline-primary mr-2">
+            <i class="fa fa-plus"></i> Add new album
+        </a>
+    </div>
+
+</body>
+</html>

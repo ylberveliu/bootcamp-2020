@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Load images | Promises</title>
+</head>
+<body>
+    <script type="module">
+        import loadImage from './modules/load_images_with_promise.js';
+        
+        const displayImage = (src) => {
+            let image = document.createElement('img');
+            image.setAttribute('src', src);
+            image.setAttribute('height', '120px');
+            document.body.appendChild(image);
+        }
+
+        Promise.all([
+            loadImage('img1.jpg'),
+            loadImage('img2.jpeg'),
+            loadImage('img3.jpeg'),
+        ])
+        .then(images => images.forEach(image => displayImage(image.src)))
+        .catch(error => document.write(error));
+    </script>
+</body>
+</html>

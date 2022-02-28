@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array & Object Destructuring</title>
+</head>
+<body>
+    <script>
+
+        const {a: aa = 100, b: bb = 200} = {b:20};
+
+        document.write(`AA: ${aa} <br />`); // 100 - 20 / 100
+        document.write(`BB: ${bb} <br />`); // 200 - 20
+
+        // const person = {
+        //     name : "Ylber",
+        //     age : 30
+        // };
+
+        // const {name, age} = person;
+
+        // document.write(`Name: ${name} <br />`);
+        // document.write(`Age: ${age} <br />`);
+
+        // const students = ["Arta", "Tea", "Dea"];
+
+        // const [s1, s2, s3] = students;
+
+        // document.write(`Student one: ${s1} <br />`);
+        // document.write(`Student two: ${s2} <br />`);
+        // document.write(`Student three: ${s3}`);
+
+        // let s1 = "Arta", s2 = "Artani";
+
+        // [s1, s2] = [s2, s1];
+
+
+        // // [s1="Arta", s2="Artani"] = [20];
+
+        // document.write(`Student: ${s1} <br />`);
+        // document.write(`Student: ${s2} <br />`);
+
+        // let s1, s2;
+
+        // function getNames() {
+        //     return ["Arta", "Dea", "Tea", "Artani", "Agoni"];
+        // }
+
+        // const x = (...arr) => console.log(typeof(arr));
+
+        // x();
+
+        // //[s1, , ,s2] = getNames();
+
+        // //       array
+        // [s1, s2, ...rs] = getNames();
+
+        // // console.log(rs);
+        // // console.log(typeof(rs));
+
+        // rs.forEach(e => {
+        //     console.log(e);
+        // });
+
+        // document.write(`- Student: ${s1} <br />`);
+        // document.write(`- Student: ${s2} <br />`);
+        // document.write(`- Students: ${rs.toString()} <br />`);
+    </script>
+</body>
+</html>

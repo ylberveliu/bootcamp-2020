@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Closures</title>
+</head>
+<body>
+    <script>
+
+        //let counter = 0; // global
+
+        // function f(x) {
+        //     counter += x;
+        // }
+
+        // function add() {
+        //     let counter = 0;
+        //     counter++;
+        //     document.write(counter + "<br />");
+        // } 
+
+        // function add() {
+        //     let counter = 0;
+        //     //counter++;
+        //     function plus() { counter++; }
+        //     plus();
+        //     document.write(counter + "<br />");
+        // } 
+
+        function add() {
+            let counter = 0;
+            return () => {
+                counter++;
+                return counter;
+            }
+        }
+
+        let incrementer = add();
+
+        document.write(incrementer() + "<br />");
+        document.write(incrementer() + "<br />");
+        document.write(incrementer() + "<br />");
+
+        // add();
+        // add();
+
+        // //f(5);
+
+        // add();
+    </script>
+</body>
+</html>

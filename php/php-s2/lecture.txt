@@ -1,0 +1,45 @@
+Session #1
+-------------------------------
+[x] Infinite loops
+[x] break
+[x] continue
+
+
+Session #2
+-------------------------------
+[x] Variable Scope
+    [x] global
+    [x] local
+[x] Functions
+    [x] Pass by val
+    [x] Pass by reference
+    [x] Anonymous functions
+    [x] Closures
+    [x] Callbacks
+[x] Type Declarations
+    [x] arguments
+    [x] return type
+[x] Strings 
+[x] Arrays 
+    [x] Primitive arrays
+        [x] Read items
+        [x] Change items
+    [x] Associative arrays
+    [x] Multidimensional arrays
+    [x] Array iteration 
+    [x] Array functions
+[x] Date and Times
+    [x] getdate()
+    [x] localtime()
+    [x] date()
+    [x] new DateTime
+    [x] Parse string to date
+        [x] strtotime()
+[] Error handling
+    [] try, cach, finally
+[] I/O (working with files)
+    [] Read 
+    [] Write
+    [] Append
+    [] Delete
+

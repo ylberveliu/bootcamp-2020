@@ -1,0 +1,11 @@
+CREATE TABLE IF NOT EXISTS tasks (
+    id INT NOT NULL PRIMARY KEY,
+    title VARCHAR(200) NOT NULL,
+    start_date DATE NOT NULL,
+    due_date DATE NOT NULL,
+    status BOOLEAN NOT NULL DEFAULT FALSE,
+    priority TINYINT NOT NULL,
+    description TEXT NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object literals</title>
+</head>
+<body>
+    <script>
+
+        //key : value
+
+        const car = {
+            name : "BMW x5",
+            weight : 1,
+            move: () => console.log("Car is moving")
+        };
+
+        console.log(car.name);
+        console.log(car['weight']);
+        car.move();
+
+
+        const parts = ['shoulders', 'knees']; 
+        const p2 = [4, 6];
+        const lyrics = ['head', ...parts, 'and', 'toes', ...p2]; 
+
+    </script>
+</body>
+</html>

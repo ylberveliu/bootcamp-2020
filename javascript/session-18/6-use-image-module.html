@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="load-image">
+        Load nature image 
+    </button>
+
+    <div id="img"></div>
+
+    <script type="module">
+        import { loadImage } from './modules/image.js';
+
+        const images = [
+            {
+                path: 'https://img.etimg.com/thumb/width-1200,height-900,imgsize-1016106,resizemode-1,msid-68721064/magazines/panache/pop-the-nature-pill-spending-just-20-mins-outside-can-lower-your-stress.jpg',
+                width: '600px',
+                alt: 'Lorem ipsum 1',
+                parent: document.getElementById('img')
+            },
+            {
+                path: 'https://upload.wikimedia.org/wikipedia/commons/4/42/Shaqi_jrvej.jpg',
+                width: '600px',
+                alt: 'Lorem ipsum 2',
+                parent: document.getElementById('img')
+            }
+        ];
+
+        // const path = 'https://img.etimg.com/thumb/width-1200,height-900,imgsize-1016106,resizemode-1,msid-68721064/magazines/panache/pop-the-nature-pill-spending-just-20-mins-outside-can-lower-your-stress.jpg';
+        // const width = '600px';
+        // const alt = "Nature image. Credits: John Smith";
+        // const img_parent = document.getElementById('img');
+
+        const btn = document.getElementById('load-image');
+
+        btn.addEventListener('click', e => {
+            images.forEach(io => loadImage(io.path, io.width, io.alt, io.parent));
+        });
+
+    </script>
+</body>
+</html>

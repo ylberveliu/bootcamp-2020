@@ -1,0 +1,24 @@
+<form action="{% url 'methods' %}" method="GET">
+    <button type="submit">GET</button>
+</form>
+
+<form action="{% url 'methods' %}" method="POST">
+    {% csrf_token %}
+    <button type="submit">POST</button>
+</form>
+
+<form action="{% url 'methods' %}" method="POST">
+    {% csrf_token %}
+    <input type="hidden" name="_method" value="PUT">
+    <button type="submit">PUT</button>
+</form>
+
+<form action="{% url 'methods' %}" method="POST">
+    {% csrf_token %}
+    <input type="hidden" name="_method" value="DELETE">
+    <button type="submit">DELETE</button>
+</form>
+
+{% if data %}
+    {{ data }}
+{% endif %}

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>id and class attributes | Web Forms</title>
+    <style>
+        #name { color: red; }
+        .form-control { border-color: yellow; }
+        .red-underline { background-color: yellow; font-weight: bold; color: red; }
+    </style>
+</head>
+<body>
+
+    <p>
+        Lorem ipsum dolor sit amet, <span class="red-underline">ipsum</span> adipisicing elit. 
+    </p>
+
+    <p>
+        Aliquam doloribus molestias <span class="red-underline">adipisicing</span> voluptatem mollitia, ullam, tempora.
+    </p>
+
+    <p>
+        Adipisci similique nesciunt quas <span class="red-underline">doloribus</span> quia sapiente rem? Ex facilis ad velit molestias suscipit!
+    </p>
+
+   
+    <form action="">
+        <input type="text" name="name" id="name" value="John Smith" placeholder="Name">
+        <br /><br />
+        <input type="text" name="surname" class="form-control" id="surname" placeholder="Surname">
+        <br /><br />
+        <input type="radio" name="education" id="bsc"><label for="bsc">Bacelor</label>
+        <input type="radio" name="education" id="msc"><label for="msc">Studime postdiplomike</label>
+    </form>
+
+    <script>
+        var name = document.getElementById('name').value;
+        var spans = document.getElementsByClassName('red-underline');
+
+        console.log(name);
+        console.log(spans);
+        //document.write(name);
+    </script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Math, Number, Date Objects</title>
+</head>
+<body>
+    <script>
+
+        // new Date().now(); // error 
+
+        // Date.now(); // valid
+
+        //let hourToMilisec = h => h * 60 * 60 * 1000;
+
+        let ntb = new Date("1890-05-20");
+
+        //document.write(hourToMilisec(10));
+
+        ntb.setHours(25);
+
+        document.write(ntb.getMonth() + 1);
+        document.write("<br />");
+        document.write("Hours: " + ntb.getHours());
+
+        // document.write(Math.pow(5, 3) + "<br />");
+        // document.write(Math.PI);
+
+        // if(Number.isInteger()) console.log("..1..");
+        // else console.log("..2..");
+
+        // console.log(Number('200.5670').toFixed(2));
+    </script>
+</body>
+</html>

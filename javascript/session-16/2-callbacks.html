@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Callback</title>
+</head>
+<body>
+
+    <button id="hello">Say hello!</button>
+
+    <script>
+        /*
+        f(x) ku x - eshte funksion
+        x - callback 
+        */
+
+        // 2000 miliseconds - 2 sec.
+        // sayHello eshte funksion (ne kete rast kur sayHello i behet pass f. SetInterval)
+        // quhet callback
+
+        document.body.style.backgroundColor = "red";
+        let colors = [
+            '#098', '#456', '#128', '#678', '#542'
+        ];
+        let i = 0;
+
+        let colorsSwitcher = () => {
+            document.body.style.backgroundColor = colors[i];
+
+            if ( i == (colors.length - 1) ) i = 0;
+
+            i++;
+        };
+
+        setInterval(colorsSwitcher, 2000);
+
+        let sayHello = () => document.write("Hello there!!!!");
+        document.querySelector("#hello").addEventListener('click', sayHello);
+
+
+        // Callback
+        let greet = name => alert(`Hello ${name}`);
+
+
+        // greetUser - quhet high-order function
+        let greetUser = cbk => {
+            var name = prompt("What's your name: ");
+            cbk(name);
+        }
+
+        greetUser(greet); // promt->Ylber->Hello Ylber
+    </script>
+</body>
+</html>

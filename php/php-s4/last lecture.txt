@@ -1,0 +1,29 @@
+Session #3
+------------------------------------
+[x] Error Handling
+    [x] Errors
+    [x] throw
+    [x] try / catch / finally
+    [x] Exception class
+    [] Throwable interface
+[x] Strings & Patterns
+    [x] More about strings 
+    [x] String functions
+    [x] Regular expressions
+        [x] preg_match()
+        [x] preg_match_all()
+        [x] preg_replace()
+        [x] preg_split()
+[x] Working with files
+    [x] Read
+    [x] Write
+    [x] Append
+    [x] Remove
+    [x] file_get_contents()
+    [x] file_put_contents()
+[x] Working with directories
+    [x] Create
+    [x] Read
+    [x] List
+    [x] Other functions
+[] Object-oriented Programming

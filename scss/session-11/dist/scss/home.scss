@@ -1,0 +1,83 @@
+@import 'mixins';
+
+@function set-text-color($color)
+{
+    @if(lightness($color) > 70) {
+        @return #900;
+    } @else {
+        @return #f3f3f3;
+    }
+}
+
+@mixin set-button-colors($color) {
+    color: set-text-color($color);
+    background-color: $color;
+}
+
+$body-bg-color: lightblue;
+$btn-color: purple;
+
+
+body {
+    background-color: $body-bg-color;
+    color: set-text-color($body-bg-color);
+}
+
+a {
+    @include set-button-colors($btn-color);
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    display: inline-block;
+
+
+    &:hover {
+       @include transform(rotate(5deg));
+    }
+}
+
+$sizes: (1,2,3,4,5,6,7,8,9,10);
+
+// @each $size in $sizes {
+//     .p-#{$size} {
+//         padding: #{$size}em;
+//     }
+
+//     .py-#{$size} {
+//         padding: #{$size}em 0;
+//     }
+// }
+
+// @for $size from 1 through 10 {
+//     .p-#{$size} {
+//         padding: #{$size}em;
+//     }
+
+//     .py-#{$size} {
+//         padding: #{$size}em 0;
+//     }
+// }
+
+$start: 1;
+$end: 10;
+
+//         1 <= 10
+@while $start < $end {
+    .p-#{$start} {
+        padding: #{$start}em;
+    }
+
+    .py-#{$start} {
+        padding: #{$start}em 0;
+    }
+
+    .m-#{$start} {
+        margin: #{$start}em;
+    }
+
+    .my-#{$start} {
+        margin: #{$start}em 0;
+    }
+
+    $start: $start + 1;
+}

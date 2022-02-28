@@ -1,0 +1,19 @@
+<style>
+    .form-field {
+        background-color: red;
+    }
+</style>
+
+<form action="/todo/create" method="POST">
+    {% csrf_token %}
+    {{ form }}
+    <button type="submit">Save todo</button>
+</form>
+
+{% if todos %}
+    {% for index, todo in todos.items %}
+        <p>
+            {{ todo.0 }} - <a href="{% url 'view-todo' index %}">View todo</a>
+        </p>
+    {% endfor %}
+{% endif %}

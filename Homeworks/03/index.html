@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Central Studio Apartment - Cullinan</title>
+    <style>
+        input { width: 300px; }
+        select { width: 150px; }
+
+        h1 { color: cadetblue; }
+
+        form { background-color: #e3e3e3; }
+
+        #details p { color: cadetblue; }
+    </style>
+</head>
+<body>
+
+    <h1>Central Studio Apartment - Cullinan</h1>
+
+    <div class="apartment-images">
+        <img src="images/apartment/01.jpg" height="200" alt="Central Studio Apartment">
+        <img src="images/apartment/02.jpg" height="200" alt="Central Studio Apartment">
+        <img src="images/apartment/06.jpg" height="200" alt="Central Studio Apartment">
+        <img src="images/apartment/04.jpg" height="200" alt="Central Studio Apartment">
+        <!-- <img src="images/apartment/05.jpg" height="200" alt="Central Studio Apartment"> -->
+    </div>
+
+    <div class="address">
+        <img src="images/pin.png" height="24" alt="Map pin image">
+        4 street, "Todor Siskov" - Apartment 2, 9000 Varna City, Bulgaria
+    </div>
+
+    <br /><br />
+
+    <div class="content">
+        <table>
+            <tr>
+                <td width="350">
+                    <form action="">
+                        <fieldset>
+                            <legend>Book appartment</legend>
+                            <table>
+                                <tr>
+                                    <td colspan="2">
+                                        <label for="destination"><small>Destination/property name:</small></label>
+                                        <br />
+                                        <input type="text" name="destination" id="destination" value="Central Studio Apartment - Cullinan">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2">
+                                        <br />
+                                        <label for="check-in"><small>Check-in date:</small></label>
+                                        <br />
+                                        <input type="date" name="check_in" id="check-in">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2">
+                                        <br />
+                                        <label for="check-out"><small>Check-out date:</small></label>
+                                        <br />
+                                        <input type="date" name="check_out" id="check-out">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <br />
+                                        <label for="adults"><small>Adults:</small></label>
+                                        <br />
+                                        <select name="adults" id="adults">
+                                            <option value="1">1 adult</option>
+                                            <option value="2">2 adults</option>
+                                            <option value="3">3 adults</option>
+                                            <option value="4">4 adults</option>
+                                            <option value="5">5 adults</option>
+                                        </select>
+                                    </td>
+                                    <td>
+                                        <br />
+                                        <label for="children"><small>Children:</small></label>
+                                        <br />
+                                        <select name="children" id="children">
+                                            <option value="">No children</option>
+                                            <option value="1">1 children</option>
+                                            <option value="2">2 childrens</option>
+                                            <option value="3">3 childrens</option>
+                                            <option value="4">4 childrens</option>
+                                            <option value="5">5 childrens</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2">
+                                        <br />
+                                        <input type="submit" name="book" id="book" value="Book">
+                                        <!-- <button name="book" id="book" type="Submit">Book</button> -->
+                                    </td>
+                                </tr>
+                            </table>
+                        </fieldset>
+                    </form>
+                </td>
+                <td width="50"></td>
+                <td>
+                    <p>
+                        Situated in Varna City, less than 1 km from Varna Cathedral and a 12-minute walk from Varna Opera House, Central Studio Apartment - Cullinan offers free WiFi and air conditioning. Housed in a building dating from 2012, this apartment is 2.8 km from Palace of Culture and Sports and 3.4 km from Varna Zoo.
+                        <br /><br />
+                        The apartment has 1 bedroom, a flat-screen TV with satellite channels, an equipped kitchen with a fridge and an oven, a washing machine, and 1 bathroom with a shower.
+                        <br /><br />
+                        Popular points of interest near the apartment include Varna City Hall, Kolhozen pazar market and Port of Varna. The nearest airport is Varna Airport, 8 km from Central Studio Apartment - Cullinan.
+                    </p>
+                    <br /><br />
+                    <table id="details" width="100%">
+                        <tr>
+                            <td width="20%">
+                                <img src="images/icons/icon-1.png" alt="Whole apartment">
+                                <p>Whole apartment</p>
+                            </td>
+                            <td width="20%">
+                                <img src="images/icons/icon-2.png" alt="Size">
+                                <p>Size</p>
+                            </td>
+                            <td width="20%">
+                                <img src="images/icons/icon-3.png" alt="Free WiFi">
+                                <p>Free WiFi</p>
+                            </td>
+                            <td width="20%">
+                                <img src="images/icons/icon-4.png" alt="Non-smoking rooms">
+                                <p>Non-smoking rooms</p>
+                            </td>
+                            <td width="20%">
+                                <img src="images/icons/icon-5.png" alt="Heating">
+                                <p>Heating</p>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="map">
+        <br /><br />
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2891.7748363040023!2d26.474964315930848!3d43.54873527912503!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40af0f10f928d87f%3A0x83e79eb3df50406a!2s2%209000%2C%207219%20Razgrad%2C%20Bulgaria!5e0!3m2!1sen!2smk!4v1598178996396!5m2!1sen!2smk" 
+            width="100%" 
+            height="450" 
+            frameborder="0" 
+            style="border:0;" 
+            allowfullscreen="" 
+            aria-hidden="false" 
+            tabindex="0">
+        </iframe>
+    </div>
+    
+</body>
+</html>

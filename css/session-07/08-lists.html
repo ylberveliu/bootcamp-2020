@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lists | CSS</title>
+    <style>
+        /*
+            list-style-type:
+            list-style-image:
+            list-style-position:
+
+            Te permbledhur:
+            list-style:
+        */
+
+        body {
+            padding: 50px;
+        }
+
+        ul {
+            /* list-style-type: square; */
+            /* list-style-image: url('images/icon.png');
+            list-style-position: inside; */
+            border: 1px solid red;
+            padding-left: 0px;
+
+            list-style: url('images/icon.png') inside;
+        }
+        li {
+            background-color: lightgreen;
+            background-color: lightgrey;
+            margin: 50px;
+
+            text-transform: uppercase;
+            text-decoration: line-through;
+
+            font-size: 24px;
+
+            /* transform: rotate(-5deg); */
+        }
+    </style>
+</head>
+<body>
+
+    <ul>
+        <li>Lorem ipsum dolor</li>
+        <li>Consectetur adipisicing elit</li>
+        <li>Eius aut cupiditate</li>
+    </ul>
+    
+</body>
+</html>

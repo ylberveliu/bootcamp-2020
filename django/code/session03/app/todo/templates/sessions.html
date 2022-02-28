@@ -1,0 +1,22 @@
+{% if name %}
+    <p>Name: {{ name }}</p>
+{% else %}
+    <p>Name is not set!</p>
+{% endif %}
+
+{% if email %}
+    <p>Email: {{ email }}</p>
+    {% else %}
+        <p>Email is not set!</p>
+{% endif %}
+
+{% if cart %}
+    <p>Cart items:</p>
+    <ul>
+    {% for product in cart %}
+        <li>{{ product.name }}</li>
+    {% endfor %}
+    </ul>
+{% else %}
+        <p>Cart is not set!</p>
+{% endif %}

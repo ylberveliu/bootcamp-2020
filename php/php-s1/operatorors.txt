@@ -1,0 +1,36 @@
+Operatoret:
+------------------------------------------------
++1. Artimetik    +, -, *, /, %, **      
++2. Operatoret per ndarje te vleres: 
+    =, +=, -=, *=, /= ...
++3. Operatoret per pune me bit-a 
+    &    4 -> 0010 & 5 0011         AND 
+    |
+    ^ Xor 
+    ~
+    << 
+    >>
++4. Operatore per krahasim: <, >, <=, >=, ==, ===, !=, !==
+5. Error @
+    @mysqli(...)
+    @ftp
+6. Operatori per ekzekutimin e komandave (te linux/unix)
++7. Increment dhe Decrement (pre/post)
++8. Operatoret logjik   
+        and     &&
+        or      ||
+        Xor 
+        !
++9. Operatoret per pune me stringje
+        .   concatinate op. (operatori per bashkangjitje)
+        .= 
+
+
+
+    Xor
+
+    p q p^q
+    0 0 0
+    0 1 1
+    1 0 1
+    1 1 0

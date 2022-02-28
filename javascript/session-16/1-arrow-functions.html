@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrow functions</title>
+</head>
+<body>
+    <script>
+
+        // Destructing array & object
+
+        let f = ({name, surname} = {name:"Arta", surname: "Gashi"}) => {
+            document.write("Emri: " + name +"<br />");
+            document.write("Mbiemri: " + surname);
+        };
+
+        f();
+
+
+        // Rest params
+        //let f = (x, y, ...params) => {
+            //console.log("Ato parametra qe dihen sigurte :" + x + "," + y);
+            //console.log("Ato parametra qe nuk dihen sigurte: " + params);
+        //    let sum = 0;
+        //
+        //    params.forEach(e => sum += e);
+        //    
+        //    return x + y + sum;
+        //};
+
+        //f(10, 20, "one", "two");
+
+        //console.log(f(10,20, 1055, 87,89,90,182));
+
+
+        // Return object
+        // let f = (name, surname) => ({name:name, surname:surname});
+        // console.log(f("Ylber", "Veliu"));
+
+
+
+        // function sayHello(name) {
+        //     document.write(`Hello ${name}`);
+        // }
+
+        // let hello = function(name) {
+        //     document.write(`Hello there - ${name}`);
+        // };
+
+        //  Arrow functions
+        // let hello_af = name => document.write(`Hello (af) - ${name}`);
+        // let addTwoNumbers = (x, y) => { return x + y; };
+        // Implicit return
+        // let addTwoNumbers = (x, y) => x + y; 
+
+        //           name
+        // hello_af("Ylber");
+        // document.write("->" + addTwoNumbers(10, 20));
+    </script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Async (keyword)</title>
+</head>
+<body>
+    <script>
+
+        // async function f() {
+        //     return 1;
+        //     //return Promise.resolve(1);
+        // }
+
+        // f().then(alert); // alert(1)
+
+        async function f() {
+            let p = new Promise((resolve, reject) => {
+                setTimeout(() => resolve("Done!"), 5000);
+            });
+
+            let result = await p;
+
+            alert(result);
+        }
+
+        f();
+    </script>
+</body>
+</html>

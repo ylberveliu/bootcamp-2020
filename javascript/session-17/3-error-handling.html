@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Error handling</title>
+</head>
+<body>
+    <script>
+        let amount = 1500;
+
+        try {
+            if (typeof(amount) !== 'number') throw "Amount must have numeric value!";
+            if (amount > 1000) throw "We cannot accept > 999$!";
+            document.write(amount +" euro");
+        } catch(e) {
+            document.write(e);
+        } finally {
+            console.log("It's me!")
+        }
+    </script>
+</body>
+</html>

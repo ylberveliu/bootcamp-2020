@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrays</title>
+</head>
+<body>
+    
+    <script>
+        let grades = [29, 10, 8, 16, 9];
+
+        // grades.sort();
+        // let le = grades[grades.length - 1];
+
+        function largestGrade(student_grades) {
+            let max = student_grades[0];
+            for(let i = 0; i < student_grades.length; i++) 
+            {
+                if(student_grades[i] > max) max = student_grades[i];
+            } 
+
+            return max;
+        }
+
+        // 10
+        let lg = largestGrade(grades);
+        document.write(lg);
+
+
+
+        // let grades = [9, 10, 8];
+        // i:         0   1  2
+        // let students = ["Arta", "Goni", "A", "B", "C","Arta", "Tina", "Goni", "A", "B", "C","Arta", "Goni", "A", "B", "C","Arta", "Goni", "A", "B", "C","Arta", "Goni", "A", "B", "C","Arta", "Goni", "A", "B", "C","Arta", "Goni", "A", "B", "C","Arta", "Goni", "A", "B", "C","Arta", "Goni", "A", "B", "C","Arta", "Goni", "A", "B", "C"];
+        // i:               0       1    2     3   4
+
+        // console.log(grades.length);
+        // console.log(students.length);
+
+        // for(let i = 0; i < students.length; i++) {
+        //     console.log(students[i]);
+        // } 
+
+
+        // let people = ["Arta", "Jeta", "Zana", "Tina", "Aulona"];
+
+        // document.write(people.toString());
+
+        // people.reverse();
+        //people.sort(); // sortimi i vargut
+
+        // pop/push - stack (FILO)
+        // let p = people.pop();
+        // people.pop();
+
+        // people.push("")
+
+        // for(let i = 0; i < people.length; i++) {
+        //     document.write(people[i] + ", ");
+        // } 
+
+        // document.write("<hr />" + p);
+
+        // let j = 0;
+
+        // while(j < students.length) {
+        //     console.log(students[j]);
+        //     j++;
+        // }
+
+
+        // console.log(grades[1]);
+        // console.log(students[0]);
+
+
+        // console.log(grades);
+        // console.log(students);
+    </script>
+</body>
+</html>

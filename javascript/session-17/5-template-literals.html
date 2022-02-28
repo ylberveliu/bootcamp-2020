@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Template literals</title>
+</head>
+<body>
+    <p></p>
+    <script>
+        let counter = 10;
+        let c = 10;
+        const p = document.getElementsByTagName('p')[0];
+
+        // p.innerText = 'Counter: ' + counter;
+        p.innerText = `Counter: ${counter + c}`;
+    </script>
+</body>
+</html>

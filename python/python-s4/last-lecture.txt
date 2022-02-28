@@ -1,0 +1,31 @@
+Session #3
+---------------------------------
+[x] List comprehensions
+[x] Lambda functions
+    [x] Lambda with one arg
+    [x] Lambda with multiple args
+    [x] High-order functions (with lambda)
+[x] Filter, Map, and Reduce
+    [x] Filter
+    [x] Map
+    [x] Reduce (using functools)
+[x] Regular expressions
+    [x] "re" module
+    [x] findall()
+    [x] search()
+    [x] split()
+    [x] sub()
+[x] Object-oriented programming
+    [x] Class
+    [x] Empty class 
+    [x] Class properties (instance properties)
+    [x] Class methods (instance methods)
+        [x] self
+    [x] Instantiating objects
+    [x] Checking identity
+    [] Method overriding
+    [] Method overloading
+    [] Encapsulation         ???   private, protected, public
+    [] Inheritance
+[] Flask
+[] Exercises

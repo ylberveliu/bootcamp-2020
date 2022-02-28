@@ -1,0 +1,14 @@
+{% if article != None %}
+    <h1>{{ article['title'] }}</h1>
+    <img src="{{ article['image'] }}" alt="{{ article['title'] }}">
+    <div>
+        <p>
+            {{ article['content'] }}
+        </p>
+    </div>
+{% else %}  
+    <h1>Sorry</h1>
+    <p>
+        Article doesn't exist!
+    </p>
+{% endif %}

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dropdown (Select) | Web Forms</title>
+</head>
+<body>
+
+    <form action="">
+        <label for="education">Education:</label>
+        <select name="education" id="education" required>
+            <option value="">Your education?</option>
+            <option value="bsc">BSc</option>
+            <option value="msc">MSc</option>
+            <option value="phd">Phd</option>
+        </select>
+        <br /><br />
+        <label for="category">Category:</label>
+        <select name="category" id="category" required>
+            <option value="">Select category</option>
+            <optgroup label="Patundshmeri">
+                <option value="bsc">Shtepi</option>
+                <option value="msc">Banesa</option>
+                <option value="phd">Lokale</option>
+            </optgroup>
+            <optgroup label="Vetura">
+                <option value="bsc">BMW</option>
+                <option value="msc">Polo</option>
+                <option value="phd">Mercedes</option>
+            </optgroup>
+        </select>
+        <br /><br />
+        <input type="submit" name="submit" value="Send">
+    </form>
+    
+</body>
+</html>

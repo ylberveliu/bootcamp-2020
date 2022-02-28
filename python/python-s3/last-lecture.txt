@@ -1,0 +1,32 @@
+[x] Functions 
+    [x] Inner functions
+    [x] Returning functions from functions
+    [x] Decorators
+    [x] Generators
+[x] List (sequence types)
+    [x] Access list members
+    [x] Change values
+    [x] Iterate list (for, while)
+    [x] List functions 
+[x] Tuple (sequence types)
+    [x] Access tuple members
+    [x] Change values
+    [x] Iterate tuple 
+    [x] Tuple functions 
+[x] Set (set types)
+    [x] Access set members
+    [x] Change values
+    [x] Iterate set 
+    [x] Set functions 
+[x] Dictionaries (mapping type)
+    [x] Access dictionary members
+    [x] Change values
+    [x] Iterate dictionary 
+    [x] Dictionary functions 
+[x] Strings (sequence types)
+    [x] Access string (sequences)
+    [x] Change values
+    [x] Iterate strings 
+    [x] String functions  
+[x] Error handling
+[x] Modules

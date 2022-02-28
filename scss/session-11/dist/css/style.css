@@ -1,0 +1,82 @@
+@import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
+nav {
+  background-color: purple;
+  border-bottom: 1px solid #ccc;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: stretch;
+      align-content: stretch;
+}
+
+nav ul {
+  list-style-type: none;
+}
+
+nav li {
+  background-color: #e3e3e3;
+  margin-bottom: 10px;
+}
+
+nav li:hover {
+  background-color: blue;
+  -webkit-transform: rotate(1deg);
+          transform: rotate(1deg);
+}
+
+nav li a {
+  color: red;
+  text-decoration: none;
+}
+
+body {
+  background-color: aquamarine;
+  margin: 0px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Lobster", cursive;
+}
+
+.container {
+  width: 100%;
+}
+
+article[role="main"] {
+  position: relative;
+  float: left;
+  width: 62.5%;
+}
+
+article[role="main"]:hover {
+  background-color: red;
+}
+
+article[role="main"] h1 {
+  -webkit-transform: rotate(5deg);
+          transform: rotate(5deg);
+}
+
+article[role="complementary"] {
+  position: relative;
+  float: left;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 31.25%;
+  background-color: lightcyan;
+  padding: 20px;
+  -webkit-transform: rotate(5deg);
+          transform: rotate(5deg);
+}

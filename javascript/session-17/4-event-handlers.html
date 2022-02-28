@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event handlers</title>
+</head>
+<body onload="olf()">
+
+    <button id="btn">click me!</button>
+
+    <script>
+        var olf = e => {
+            // var node = document.createElement("p");
+            // var textnode = document.createTextNode("This is a paragraph");
+            // node.appendChild(textnode);
+            // document.getElementById("body").appendChild(node);
+
+            console.log("Document was loaded!");
+        };
+
+        const btn = document.querySelector('#btn');
+        btn.addEventListener('dblclick', e => {
+            btn.style.color = "white";
+            btn.style.backgroundColor = "red";
+        });
+        btn.addEventListener('mouseover', e => {
+            btn.style.color = "white";
+            btn.style.backgroundColor = "purple";
+        });
+        btn.addEventListener('mouseout', e => {
+            btn.style.color = "black";
+            btn.style.backgroundColor = "gray";
+        });
+    </script>
+</body>
+</html>

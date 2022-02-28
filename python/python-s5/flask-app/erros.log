@@ -1,0 +1,5 @@
+INFO:werkzeug:127.0.0.1 - - [26/Nov/2020 21:19:41] "[37mGET /get-cookie HTTP/1.1[0m" 200 -
+ERROR:app:Cookie with key email doesn't exist!
+INFO:werkzeug:127.0.0.1 - - [26/Nov/2020 21:19:51] "[37mGET /get-cookie HTTP/1.1[0m" 200 -
+INFO:werkzeug: * Detected change in '/Users/iljberveliji/Desktop/BOOTCAMP/python/python-s5/flask-app/app.py', reloading
+INFO:werkzeug: * Detected change in '/Users/iljberveliji/Desktop/BOOTCAMP/python/python-s5/flask-app/app.py', reloading

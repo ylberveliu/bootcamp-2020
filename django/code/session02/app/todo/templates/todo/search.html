@@ -1,0 +1,34 @@
+{% extends 'todo/master.html' %}
+
+{% block title %}Search{% endblock %}
+
+{% block content %}
+    <div class="container my-4">
+        {% if todos %}
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>Title</th>
+                    <th>Status</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for todo in todos %}
+                <tr>
+                    <td>{{ todo.title }}</td>
+                    <td>{% if todo.comleted %} Completed {% else %} Open {% endif %}</td>
+                    <th>
+                        {% if todo.comleted == False %}
+                        <a href="{% url 'mark-as-completed' todo.id %}" class="btn btn-sm btn-link">Mark as completed</a>
+                        {% endif %}
+                        <a href="{% url 'update' todo.id %}" class="btn btn-sm btn-link">Edit</a>
+                        <a href="{% url 'delete' todo.id %}" class="btn btn-sm btn-danger" onclick="return confirm('Are you sure?');">Delete</a>
+                    </th>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        {% endif %}
+    </div>
+{% endblock %}

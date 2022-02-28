@@ -1,0 +1,1 @@
+alert("Hello, world! - From hello.js");

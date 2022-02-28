@@ -1,0 +1,11 @@
+<h1>Welcome</h1>
+
+{% with messages = get_flashed_messages() %}
+    {% if messages %}
+    <ul>
+        {% for msg in messages %}
+        <li>{{ msg }}</li>
+        {% endfor %}
+    </ul>
+    {% endif %}
+{% endwith %}

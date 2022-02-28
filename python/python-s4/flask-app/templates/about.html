@@ -1,0 +1,22 @@
+{% extends "app.html" %}
+
+{% block title %}About Us{% endblock %}
+
+{% block content %}
+<h1>Flask (web framework)</h1>
+<p>{{ idja }}</p>
+<p>
+    Flask is a micro web framework written in Python. It is classified as a microframework because it does not require particular tools or libraries.[3] It has no database abstraction layer, form validation, or any other components where pre-existing third-party libraries provide common functions. However, Flask supports extensions that can add application features as if they were implemented in Flask itself. Extensions exist for object-relational mappers, form validation, upload handling, various open authentication technologies and several common framework related tools
+</p>
+<img src="{{ url_for('static', filename='images/logos/flask.png') }}" alt="Flask Web Framework">
+{% endblock %}
+
+
+
+
+
+
+
+
+
+

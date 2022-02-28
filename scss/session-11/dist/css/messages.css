@@ -1,0 +1,25 @@
+.message {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin: 20px 0px;
+  color: #666;
+  border-radius: 6px;
+}
+
+.warning {
+  color: #333;
+  background-color: #ca982b;
+}
+
+.info {
+  background-color: #138ed6;
+}
+
+.default {
+  background-color: #b2b7b9;
+}
+
+.danger {
+  color: white;
+  background-color: #c03d3d;
+}

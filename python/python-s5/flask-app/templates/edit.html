@@ -1,0 +1,4 @@
+<form method="POST" action="{{ url_for('edit', id=todo.id) }}">
+    <input type="text" name="todo" placeholder="Enter your task" value="{{ todo.title }}" />
+    <button type="submit">Save</button>
+</form>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GitHub Profile Image | Async/Await</title>
+</head>
+<body>
+    
+    <script>
+        const api_url = 'https://api.github.com/users/'
+        async function showUserAvatar(username) {
+            let githubResponse = await fetch(`${api_url}${username}`);
+            let githubUser =  await githubResponse.json();
+
+            let img = document.createElement('img');
+            img.src = githubUser.avatar_url;
+            document.body.appendChild(img);
+            //                                                         sec * 1000
+            await new Promise((resolve, reject) => setTimeout(resolve, 6000));
+
+            img.remove();
+
+            console.log(githubUser);
+        }
+
+        showUserAvatar('ylberveliu');
+    </script>
+</body>
+</html>

@@ -1,0 +1,19 @@
+<style>
+    .article {
+        width: 300px;
+        position: relative;
+        float: left;
+        margin: 10px;
+    }
+
+    .article img {
+        width: 300px;
+    }
+</style>
+
+{% for key in articles.keys() %}
+    <div class="article">
+        <a href="{{ url_for("read_article", article_id=key) }}">{{ articles[key]['title'] }}</a>
+        <img src="{{ articles[key]['image'] }}" alt="{{ articles[key]['title'] }}">
+    </div>
+{% endfor %}

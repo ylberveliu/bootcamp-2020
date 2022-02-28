@@ -1,0 +1,18 @@
+{% extends "app.html" %}
+
+{% block title %}Homepage{% endblock %}
+
+{% block content %}
+<div>
+    <p>
+        Flask was created by Armin Ronacher of Pocoo, an international group of Python enthusiasts formed in 2004.[7] According to Ronacher, the idea was originally an April Fool's joke that was popular enough to make into a serious application.
+    </p>
+    <a href="{{ url_for('get_user_data_by_id', id=7) }}">Ergys</a>
+    &nbsp; / &nbsp;
+    <a href="{{ url_for('get_user_data_by_id', id=11) }}">Egzon</a>
+    &nbsp; / &nbsp;
+    <a href="{{ url_for('get_user_data_by_id', id=2) }}">Teuta</a>
+    &nbsp; / &nbsp;
+    <a href="{{ url_for('get_user_data_by_id', id=1) }}">Isuf</a>
+</div>
+{% endblock %}

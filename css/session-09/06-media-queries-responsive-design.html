@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@media | Responsive Design</title>
+    <style>
+    /* Media Query for medium devices [>800px] */
+        @media (min-width: 600px) 
+        {
+            .nav {
+                width: 100%;
+                background-color: antiquewhite;
+                margin-bottom: 20px;
+            }
+            .content {
+                width: 100%;
+                height: 550px;
+                background-color: purple;
+                margin-bottom: 20px;
+            }
+            .aside {
+                width: 100%;
+                height: 150px;
+                background-color: blue;
+            }
+            .footer {
+                width: 100%;
+                background-color: red;
+            }
+        } /* ./ @media (min-width: 800px)  */
+
+        /* Media Query for medium devices [>800px] */
+        @media (min-width: 800px) 
+        {
+            .nav {
+                width: 100%;
+                background-color: antiquewhite;
+                margin-bottom: 20px;
+            }
+            .content {
+                width: 100%;
+                height: 550px;
+                background-color: purple;
+                margin-bottom: 20px;
+            }
+            .aside {
+                width: 60%;
+                height: 70px;
+                background-color: blue;
+
+                position: relative;
+                float: left;
+            }
+            .footer {
+                width: 35%;
+                margin-left: 5%;
+                height: 70px;
+                background-color: red;
+                position: relative;
+                float: left;
+
+                clear: none;
+            }
+        } /* ./ @media (min-width: 800px)  */
+
+
+        /* Media Query for large devices [>1200px] */
+        @media (min-width: 1200px) 
+        {
+            .nav {
+                width: 100%;
+                background-color: antiquewhite;
+                margin-bottom: 20px;
+            }
+            .content {
+                width: 70%;
+                height: 550px;
+                background-color: purple;
+                margin-right: 5%;
+
+                position: relative;
+                float: left;
+                margin-bottom: 20px;
+            }
+            .aside {
+                width: 25%;
+                height: 550px;
+                background-color: blue;
+
+                position: relative;
+                float: left;
+            }
+            .footer {
+                width: 100%;
+                background-color: red;
+                margin-left: 0%;
+            }
+        } /* ./ @media (min-width: 1200px)  */
+
+
+        
+
+    </style>
+</head>
+<body>
+
+    <div class="nav">Navigation</div>
+    <div class="content">Content</div>
+    <div class="aside">
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsam numquam quibusdam, repellat laudantium incidunt perspiciatis sunt qui. Adipisci eveniet animi atque nemo tempore? Optio nemo quis sint alias ipsam dolor.
+    </div>
+    <div class="footer">Footer</div>
+
+
+    <header>
+        <nav>
+            ...
+        </nav>
+    </header>
+
+    <section>
+        <article>
+            ....
+        </article>
+        <article>
+            ....
+        </article>
+        <article>
+            ....
+        </article>
+    </section>
+
+    <aside>
+        <hgroup>
+            <h1>Header h1</h1>
+            <h2>Header h2</h2>
+        </hgroup>
+    </aside>
+
+</body>
+</html>

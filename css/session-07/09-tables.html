@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tables | CSS</title>
+    <style>
+        table {
+            /* empty-cells: show; */
+            /* empty-cells: hide;
+            /* border-collapse: collapse; 
+            
+            border-spacing: 100px 20px; */
+            border-collapse: collapse;
+        }
+
+        th {
+            background-color: papayawhip;
+            border: 1px solid orange;
+            text-transform: uppercase;
+        }
+
+        td {
+            border: 1px solid orange;
+            padding: 5px 10px;
+            text-align: center;
+        }
+
+        td.hide {
+            border: 0px;
+        }
+
+        td.total {
+            font-size: 24px;
+        }
+    </style>
+</head>
+<body>
+
+    <table>
+        <tr>
+            <th>#</th>
+            <th>Product</th>
+            <th width="200px">Price</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>Milk</td>
+            <td>$1.60</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>Bread</td>
+            <td>$1.20</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>Eggs</td>
+            <td>$3.20</td>
+        </tr>
+        <tr>
+            <td colspan="2" class="hide"></td>
+            <td class="total">$6.00</td>
+        </tr>
+    </table>
+
+    <!-- <table>
+        <tr>
+            <td>1</td>
+            <td>2</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td></td>
+        </tr>
+    </table> -->
+    
+</body>
+</html>

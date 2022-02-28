@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rest parameters</title>
+</head>
+<body>
+    <script>
+
+        mysqli(host, username, password, [db, type, otype])
+
+        const mysqli = (host, username, password, ...args) => {
+            // host username pass
+            connect()
+
+
+        };
+
+        mysqli("localhost", "root", "12345", "shop", "array");
+
+        const oop_students = (a, e, d, ...os) => {
+            document.write(`Studentat e njohur nga prof. ${a.name}, ${e.name}, ${d.name}`);
+            
+            os.forEach(s => document.write("<br />" + s.name));
+        };
+
+
+        oop_students(
+            {name:"And", id:1290}, 
+            {name:"Ergys", id:2220}, 
+            {name:"Dorart", id:1320}, 
+            {name:"X", id:3320}, 
+            {name:"Y", id:4320},
+            {name:"Z", id:8320},
+        );
+
+    </script>
+</body>
+</html>

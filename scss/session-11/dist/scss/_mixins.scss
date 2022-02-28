@@ -1,0 +1,13 @@
+@mixin transform($property) {
+    transform: $property;
+}
+
+
+@mixin flexbox($direction, $wrap, $align-x, $align-y, $align-content) {
+    display: flex;
+	flex-direction: $direction;
+	flex-wrap: $wrap;
+	justify-content: $align-x;
+	align-items: $align-y;
+    align-content: $align-content;
+}

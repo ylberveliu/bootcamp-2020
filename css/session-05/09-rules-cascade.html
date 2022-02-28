@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Rules Cascade</title>
+    <style>
+        /* p {
+            color: gray !important;
+        } */
+
+        ul {
+            color: orange;
+            background-color: honeydew;
+        }
+
+        p.quote {
+            color: orange;
+        }
+
+        p {
+            color: blue !important;
+        }
+    </style>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- 
+                            Prioritetet
+    1. Inline                1
+    2. Internal              2
+    3. External              3      !important 
+    -->
+    
+    <h1>Quod, vel vitae quos</h1>
+
+    <p class="quote" style="color: red;">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod, vel vitae quos sapiente a maiores, officia fuga tenetur laborum veritatis ducimus hic eos error eaque aspernatur molestias atque officiis aut.
+    </p>
+
+    <ul>
+        <li>Lorem ipsum dolor sit</li>
+        <li>Consectetur ipsum </li>
+        <li>Ipsum dolor sit</li>
+        <li>Adipisicing ipsum dolor</li>
+    </ul>
+</body>
+</html>

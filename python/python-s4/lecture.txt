@@ -1,0 +1,30 @@
+Session #4 
+------------------------------------------
+[x] Object-oriented programming (pt2)
+    [x] Method overriding
+    [x] Method overloading
+    [x] Encapsulation   ???   private, protected, public
+    [x] Inheritance
+        [x] Multiple inheritance
+    [x] Abstract classes
+    [x] Polymorphism
+[] Flask
+    [x] Development environment 
+        [x] virtualenv
+        [x] sqlite
+    [x] Install Flask (pip3 install flask)
+    [x] Hello, world! - Our first web application
+    [x] Flask instance
+    [x] Routing
+    [x] Templates
+        [x] Intro
+        [x] Rendering
+    [x] Passing data to views (templates)
+    [] Working with forms
+    [] Controlling state
+        [] Sessions
+    [] Redirection
+    [] Dealing with errors
+        [] Display 
+        [] Log 
+    [] Working with databases

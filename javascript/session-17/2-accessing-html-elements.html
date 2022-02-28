@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accessing HTML Elements</title>
+</head>
+<body>
+
+   <div id="box">
+       <h1>Welcome</h1>
+       <p class="par"> 
+           Lorem ipsum dolor sit <a href="https://www.twitter.com">amet consectetur</a> 
+           adipisicing elit. Repudiandae ipsum inventore velit earum est, 
+           illo <a href="https://www.facebook.com">cumque porro</a> voluptas sequi commodi libero, 
+           obcaecati deleniti eos sapiente labore exercitationem nulla 
+           quae accusantium?
+       </p>
+       <a href="https://www.youtube.com">Read more</a>
+   </div>     
+
+   <br>
+   <hr>
+   <br>
+
+   <p class="par">
+       Lorem ipsum dolor sit amet consectetur adipisicing elit. Error vel accusantium tempora perspiciatis asperiores! Debitis non facilis, ducimus possimus consequatur quasi nesciunt pariatur aliquam quo, minus impedit beatae esse ex.
+   </p>
+
+   <ul id="things">
+        <li>Ball</li>
+        <li>Pen</li>
+   </ul>
+
+    <script>
+        // qasja ne elemente permes ID-se
+        const box = document.getElementById('box');
+
+        //            attribute name     attribute value
+        box.setAttribute('title', "This is a box div");
+        box.style.color = "#ffffff";
+        box.style.backgroundColor = "#456789";
+
+        // qasja ne elemente permes emrit te tag-ut
+        const links = document.getElementsByTagName('a');
+
+        for(let i = 0; i < links.length; i++) {
+            //console.log(links[i].href);
+            //window.open(links[i].href);
+        }
+
+        // qasja ne elemente permes emrit te klases
+        const par = document.getElementsByClassName('par');
+        console.log(par);
+        par[1].innerHTML = "Hello there <strong>!</strong>";
+
+        // shenderrimi i HTMLCollection ne array 
+        // dhe iterimi permes funksionit forEach()
+        const par_a = Array.prototype.slice.call(par);
+        par_a.forEach(e => console.log(e.innerText));
+
+
+        var node = document.createElement("li");
+        var textnode = document.createTextNode("Bag");
+        node.appendChild(textnode);
+
+        setInterval(() => {
+            document.getElementById("things").appendChild(node);
+        }, 1000);
+
+        // const slider_div = document.getElementById('slider');
+        // new OwlSlider({
+        //     'slider' : slider_div,
+        //     'speed' : 2000
+        // });
+        // setInterval(() => {
+        //     // nderrimin e imazheve
+        // }, 2000);
+    </script>
+</body>
+</html>

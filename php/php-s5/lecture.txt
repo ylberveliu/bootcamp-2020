@@ -1,0 +1,18 @@
+Session #6
+-----------------------------------
+[x] Working with databases
+    [x] PDO       * CRUD
+[x] Web features
+    [x] Sessions
+    [x] Cookies
+    [x] Working with forms
+        [x] $_REQUEST
+        [x] $_GET
+        [x] $_POST
+    	[x] Validation
+		[x] Custom functionality
+		[x] Built-in PHP functions
+    [x] HTTP
+        [x] Headers
+        [x] Status codes
+[x] Exercises

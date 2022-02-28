@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Albums | Online Album Manager</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    
+    <div class="container my-5">
+        <div class="row">
+            <div class="col-md-6">
+                <h1>Albums</h1>
+            </div>
+            <div class="col-md-6">
+                <p class="float-right">
+                    <i class="fa fa-user"></i>
+                    {{ session.get("username") }} 
+                    | 
+                    <a href="{{ url_for('logout') }}">
+                        <i class="fa fa-sign-out"></i>
+                        Logout
+                    </a>
+                </p>
+            </div>
+        </div>
+
+        <div class="my-4">
+            {% with messages = get_flashed_messages() %}
+                {% if messages %}
+                    <div class="alert alert-info">
+                    {% for message in messages %}
+                        {{ message }}
+                    {% endfor %}
+                    </div>
+                {% endif %}
+            {% endwith %}
+            <div class="card">
+                <div class="card-body">
+                    <form action="{{ url_for('albums') }}" method="POST">
+                        <div class="form-group">
+                            <label for="title">Album title</label>
+                            <input type="text" name="title" id="title" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <button type="submit" class="btn btn-sm btn-success">Create</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    
+        <div class="my-4">
+            {%  if albums %}
+                <div class="table-responsive">
+                    <table class="table table-bordered">
+                        <tr>
+                            <th>ID</th>
+                            <th>Title</th>
+                            <th></th>
+                        </tr>
+                        {% for album in albums %}
+                        <tr>
+                            <td>{{ album.id }}</td>
+                            <td>{{ album.title }}</td>
+                            <td>
+                                <a href="{{ url_for('delete_album', album_id=album.id) }}" class="btn btn-sm btn-outline-danger" onclick="return confirm('Are you sure?');" title="Delete album">
+                                    <i class="fa fa-close"></i>
+                                </a>
+                                <a href="{{ url_for('photos', album_id=album.id) }}" class="btn btn-sm btn-outline-primary" title="Add photo">
+                                    <i class="fa fa-plus"></i>
+                                </a>
+                            </td>
+                        </tr>
+                        {% endfor %}
+                    </table>
+                </div>
+            {% else %}
+                <div class="alert alert-info">
+                    No album was added yet!
+                </div>
+            {% endif %}
+        </div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Public / Private Properties - JavaScript</title>
+</head>
+<body>
+    <script>
+
+        class Point {
+            #x = 10;  // private
+            y = 200;  // public
+            _z = 300; // protected *
+        }
+
+        const p = new Point;
+        console.log("X: " + p.x); // undefined
+        console.log("Y: " + p.y); // 20
+        console.log("Z: " + p.z); // 
+
+    </script>
+</body>
+</html>

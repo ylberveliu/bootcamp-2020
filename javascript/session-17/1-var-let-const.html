@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // var x = 10;
+        // let y = 20;
+        // const z = 30;
+
+        // global scope (bind to window obj)
+        // console.log(window.x); // 10
+        // console.log(window.y); // undifined
+        // console.log(window.z); // undifined
+
+        // function getY() {
+        //     return y;
+        // }
+
+
+        // function getZ() {
+        //     return z;
+        // }
+        
+        // document.write(getY()); // 20
+        // document.write(getZ()); // 30
+
+        // function scope
+        // function getXYZ() {
+        //     var x = 10;
+        //     let y = 20;
+        //     const z = 30;
+
+        //     console.log(x + " " + y + " " + z);
+        // }
+
+        // getXYZ();
+
+        // console.log(x + " " + y + " " + z);
+
+        // block scope
+        {
+            var x = 10;
+            let y = 20;
+            const z = 30;
+
+            // console.log(x); // 10
+            // console.log(y); // 20
+            // console.log(z); // 30
+        }
+
+        console.log(x); 
+        console.log(y); 
+        console.log(z); 
+
+        // can be reassigned
+        // x = 100;
+        // y = 200;
+        // z = 300; // error
+    </script>
+</body>
+</html>

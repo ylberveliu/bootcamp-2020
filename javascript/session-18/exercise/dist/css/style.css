@@ -1,0 +1,16 @@
+body {
+    margin: 60px 0 0 0;
+}
+
+#tasks div {
+    padding: 10px 0px;
+    border-bottom: 1px solid #e3e3e3;
+}
+
+#task {
+    border-radius: 5px 0px 0px 5px;
+}
+
+#create-task {
+    border-radius: 0px 5px 5px 0px;
+}

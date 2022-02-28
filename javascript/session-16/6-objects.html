@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objects</title>
+</head>
+<body>
+    <script>
+
+        let ergys = {
+            name : "Ergys",
+            ects : 40,
+            ag: 8.5 
+        };
+
+        let fisnik = {
+            name : "Fisnik",
+            ects : 60,
+            ag: 7.5 
+        };
+
+        let ylber = {
+            name : "Ylber",
+            ects : 30,
+            ag: 6.5 
+        };
+
+        let students = [ergys, fisnik, ylber];
+
+        console.log(students);
+
+        let seg50 = students.filter(s => s.ects > 50 );
+
+        console.log(seg50);
+
+        // let seg50_2 = [];
+        // for(let i = 0; i < students.length; i++) {
+        //     if(students[i].ects > 50) 
+        //         seg50_2.push(students[i]);
+        // }
+
+        // console.log(seg50_2);
+
+
+        // let dog = {
+        //     name : "Lesi",
+        //     wight : 30,
+        //     height : 60,
+
+        //     speak: () => document.write("Hauuu"),
+        // };
+
+        // // document.write(typeof(dog));
+
+        // // emri 
+        // //document.write(dog.name);
+        // document.write("Name: " + dog['name']);
+        // document.write("<hr />");
+        // dog.speak();
+    </script>
+</body>
+</html>

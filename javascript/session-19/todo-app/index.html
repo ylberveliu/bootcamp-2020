@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-do List</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="./dist/css/style.css" />
+</head>
+<body onload="Task.display();">
+    
+    <!-- HTML -->
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 offset-md-3">
+                <div class="card">
+                    <div class="card-header">
+                        To-do List
+                    </div>
+                    <div class="card-body">
+                        <form action="#" class="d-flex align-items-center">
+                            <input type="text" id="task" class="form-control" />
+                            <button id="create-task" class="btn btn-primary">Create</button>
+                            <button id="search-task" class="btn btn-success">Search</button>
+                        </form>
+                        <div id="tasks">
+                        </div>
+                        <div id="search">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <script>
+        let tasks = ['a', 'b', 'c'];
+        const create_task_btn = document.getElementById('create-task');
+        const search_task_btn = document.getElementById('search-task');
+        
+        class Task {
+            // display tasks
+            static display() {
+                let _tasks = '';
+                if (tasks.length > 0) {
+                    tasks.forEach(task => {
+                        _tasks += `
+                            <div class="d-flex align-items-center justify-content-between item">
+                                <p>${task}</p>
+                                <div>
+                                    <a href="#" class="btn btn-sm btn-primary" onclick="upd('${task}')">udpate</a>
+                                    <a href="#" class="btn btn-sm btn-danger" onclick="del('${task}')">delete</a>
+                                </div>
+                            </div>
+                        `;
+                    });
+                } 
+                document.getElementById('tasks').innerHTML = _tasks;
+            }
+
+            // display searched tasks
+            static displayFilteredTasks(filtered_tasks) {
+                let _tasks = '';
+                if (filtered_tasks.length > 0) {
+                    filtered_tasks.forEach(task => {
+                        _tasks += `
+                            <div class="d-flex align-items-center justify-content-between item">
+                                <p>${task}</p>
+                                <div>
+                                    <a href="#" class="btn btn-sm btn-primary" onclick="upd('${task}')">udpate</a>
+                                    <a href="#" class="btn btn-sm btn-danger" onclick="del('${task}')">delete</a>
+                                </div>
+                            </div>
+                        `;
+                    });
+                } 
+                document.getElementById('search').innerHTML = _tasks;
+            }
+
+            // create task
+            static create(task) {
+                tasks.push(task);
+            }
+
+            // update task
+            static update(task, new_task) {
+                var ind = tasks.indexOf(task);
+
+                if(ind > -1) {
+                    tasks[ind] = new_task;
+                }
+            }
+
+            // delete task
+            static delete(task) {
+                var index = tasks.indexOf(task);
+
+                if(index > -1) {
+                    tasks.splice(index, 1);
+                }
+            }
+
+            // search task
+            static search(task) {
+                let filtered_tasks = tasks.filter(item => item == task);
+
+                if(filtered_tasks.length > 0) {
+                    document.getElementById('tasks').style.display = 'none';
+                    Task.displayFilteredTasks(filtered_tasks);
+                }
+            }
+        }
+        
+        create_task_btn.addEventListener('click', e => {
+            const task = document.querySelector('#task');
+            const task_value = document.querySelector('#task').value;
+
+            if (task_value !== '') {
+                Task.create(task_value);
+                Task.display();
+                
+                task.value = '';
+            } else {
+                task.style.border = "1px solid red";
+            }
+
+            return false;
+        });
+
+
+        search_task_btn.addEventListener('click', e => {
+            const search_field = document.querySelector('#task');
+            const search_value = document.querySelector('#task').value;
+
+            if (search_value !== '') {
+                Task.search(search_value);
+                //Task.display();
+                
+                task.value = '';
+            } else {
+                search_field.style.border = "1px solid red";
+            }
+
+            return false;
+        });
+
+        function del(task) {
+            Task.delete(task);
+            Task.display();
+
+            return false;
+        }
+
+        function upd(task) {
+            let new_task = prompt("Enter new task value:");
+
+            if (new_task != '') {
+                Task.update(task, new_task);
+                Task.display();
+            } 
+
+            return false;
+        }
+    </script>
+</body>
+</html>

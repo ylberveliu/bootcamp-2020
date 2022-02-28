@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selectors | Module: CSS</title>
+    <style>
+        /* * {
+            color: red;
+            font-size: 20px;
+            font-weight: bold;
+        } */
+
+        /* span {
+            color: red;
+        }
+
+        li {
+            color: orange;
+        }
+
+        p.quote {
+            color: #666;
+            background-color: khaki;
+        }
+
+        #welcome {
+            color: blue;
+        }
+
+        p>h1 {
+            color: green;
+        }
+
+        p>span {
+            color: blue;
+        }
+
+        p>a {
+            color: pink;
+        }
+
+        h1 {
+            color: red;
+        }
+
+        h1 > span {
+            color: green;
+        }
+
+        span > h1 {
+            color: blue;
+        }
+
+        #home { color: yellow; }             */
+
+        p a {
+            color: yellowgreen !important;
+        }
+
+        .footer a {
+            color: red;
+        }
+
+        /* h1+p {
+            color: yellow;
+        } */
+
+        /* h1~p {
+            color: yellow;
+        } */
+
+        p.admins {
+            color: red;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>
+        Welcome
+        <h2>
+            Home - John
+        </h2>
+    </h1>
+
+    <h1 id="welcome">
+        Welcome 
+        <h2 id="home">
+            Home - Tea
+        </h2>
+    </h1>
+
+
+    <h1 id="home">
+        Welcome
+        <span class="home">home - Bob</span>
+    </h1>
+
+    <span>
+        Test 
+        <h1>Test2</h1>
+    </span>
+
+    <p class="quote">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam unde, quasi ullam totam optio officia consequatur quis incidunt cumque fugiat rerum quaerat, recusandae facilis est. Placeat ab aut incidunt provident.
+        <br /><br />
+        <h1>Wel</h1>
+        <span>Welcome</span>
+        <a href="#">Google</a> | <a href="#">YouTube</a>
+    </p>
+    
+    <h1 id="welcome">Welcome to CSS</h1>
+
+    <p>
+        Lorem ipsum dolor sit, <span>amet consectetur adipisicing</span> elit. Non aspernatur eius cumque dolor, natus nobis ullam aliquam possimus aperiam laborum quam quod eaque. Sit voluptate aliquid, maiores ducimus ea consequatur.
+    </p>
+
+    <h2 class="second-title">Box Model</h2>
+
+    <p class="quote">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora et beatae, 
+        assumenda ipsum <a href="#">error totam dolor 1</a> consequatur debitis rerum, consectetur, 
+        dolorum quod perferendis? Officiis, adipisci quos possimus <a href="#" style="color: orange">error totam dolor 2</a> veniam aperiam 
+        accusantium.
+        <ul>
+            <li><a href="#">Test</a></li>
+        </ul>
+    </p>
+
+
+    <div class="footer">
+        <ul>
+            <li><a href="#">Test item</a></li>
+            <li><a href="#">Test item</a></li>
+            <li><a href="#">Test item</a></li>
+            <li><a href="#">Test item</a></li>
+            <li><a href="#">Test item</a></li>
+        </ul>
+    </div>
+
+
+    <h1>
+        Welcome 
+    </h1>
+    <p class="admins">John</p> 
+    <p class="admins">Tea</p> 
+    <p>Bob</p>
+
+    <!-- <ul>
+        <li>Lorem ipsum</li>
+        <li>Lorem ipsum</li>
+        <li>Lorem ipsum</li>
+    </ul> -->
+</body>
+</html>

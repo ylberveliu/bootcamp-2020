@@ -1,0 +1,22 @@
+<form action="{% url 'index' %}" method="GET">
+    <label for="q">Search:</label>
+    <input type="text" name="q" id="q" />
+    <button type="submit">Search</button>
+</form>
+
+{% if todos %}
+<table>
+    {% for todo in todos %}
+    <tr>
+        <td>{{ todo.id }}</td>
+        <td>{{ todo.title }}</td>
+        <td>{{ todo.completed }}</td>
+    </tr>
+    {% endfor %}
+</table>
+{% endif %}
+
+{% load static %}
+<img src="{% static 'img/01.jpg' %}" height="180px" alt="Nature wallpaper - Static folder" />
+
+<img src="{% static 'nature/02.jpg' %}" height="180px" alt="Nature wallpaper - Images folder" />

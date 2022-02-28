@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Extends (Inheritance) | JavaScript</title>
+</head>
+<body>
+    <script>
+
+        class Point {
+            _x;
+            _y;
+
+            constructor(x, y) {
+                this.x = x;
+                this.y = y;
+            }
+
+            getXY() {
+                return `${this.x}, ${this.y},`;
+            }
+        }   
+
+        class Point3D extends Point {
+            z;
+
+            constructor(x, y, z) {
+                super(x, y);
+                this.z = z;
+            }
+
+            // @override
+            getXY() {
+                return `x: ${this.x}, y: ${this.y},`;
+            }
+
+            getCoordinates() {
+                return `Point3D(${this.getXY()} ${this.z})`;
+            }
+        }
+
+        class Point4D extends Point3D {
+            // code ...
+        }
+
+        const p3d = new Point3D(13,4,15);
+
+        document.write(p3d.getCoordinates());
+
+    </script>
+</body>
+</html>

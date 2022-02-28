@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms | CSS</title>
+    <style>
+        div.login {
+            width: 300px;
+            padding: 20px;
+            margin: 80px auto;
+        }
+
+        h1 {
+            color: gray;
+            text-align: center;
+            margin: 0px 0px 20px 0px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        input {
+            display: block;
+            width: 94%;
+            padding: 3%;
+            border-radius: 6px;
+            margin-bottom: 15px;
+            border: 0px;
+        }
+
+        button {
+            padding: 8px 25px;
+            border: 0px;
+            border-radius: 6px;
+            text-transform: uppercase;
+        }
+
+        button:hover {
+            color: white;
+            background-color: gray;
+        }
+
+        fieldset {
+            background-color:lightgrey;
+            border: 1px solid #666;
+            padding: 20px;
+        }
+
+        legend {
+            color: #fff;
+            background-color: #666;
+            border-radius: 6px;
+            padding: 5px 20px;
+            margin: 0px auto;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="login">
+        <form action="#" autocomplete="off">
+            <fieldset>
+                <legend>Login</legend>
+                <label for="username">Username:</label>
+                <input type="text" name="username" id="username" placeholder="John Smith">
+
+                <label for="password">Password:</label>
+                <input type="password" name="password" id="password" placeholder="*******">
+                
+                <button type="submit">Login</button>
+            </fieldset>
+        </form>
+    </div>
+    
+</body>
+</html>

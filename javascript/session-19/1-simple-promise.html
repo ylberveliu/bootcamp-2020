@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple promise</title>
+</head>
+<body>
+    <script>
+
+        const p = new Promise((resolve, reject) => {
+            const img_size = 2; // Mb
+            const u_img_size = 3;
+
+            if (img_size === u_img_size) 
+                resolve("Uploading...");
+            else 
+                reject("Image is to big!");
+        });
+
+        p.then(res => console.log(res)) // img_size === u_img_size
+         .catch(e => console.log(e)); // img_size !== u_img_size
+    </script>
+</body>
+</html>

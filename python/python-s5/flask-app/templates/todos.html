@@ -1,0 +1,39 @@
+<form method="POST" action="{{ url_for('search') }}">
+    <input type="text" name="search" placeholder="Search for task" />
+    <button type="submit">Search</button>
+</form>
+
+{% if todos %}
+    <table border="1">
+    {% for todo in todos %}
+        <tr>
+            <td>{{ todo.id }}</td> 
+            <td>{{ todo.title }}</td>
+            <td>
+            {% if todo.status == 1 %}
+                Done
+            {% else %}
+                Open
+            {% endif %}
+            </td>
+            <td>
+                {% if todo.status == 0 %}
+                <a href="{{ url_for('done', id=todo.id) }}">Mark as done</a>
+                {% endif %}
+                <a href="{{ url_for('edit', id=todo.id) }}">Edit</a>
+                <a href="{{ url_for('delete', id=todo.id) }}">Delete</a>
+            </td>
+        </tr>
+    {% endfor %}
+    </table>
+{% else %}
+    <p>0 todos</p>
+{% endif %}
+
+
+<br /><br />
+
+<form method="POST" action="{{ url_for('index') }}">
+    <input type="text" name="todo" placeholder="Enter your task" />
+    <button type="submit">Save</button>
+</form>

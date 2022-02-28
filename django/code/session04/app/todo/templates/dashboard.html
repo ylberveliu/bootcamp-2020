@@ -1,0 +1,64 @@
+<style>
+    #id_user,
+    label[for="id_user"] {
+       display: none;
+    }
+</style>
+
+<h1>Dashboard</h1>
+<p>
+    {{ username }} - <a href="{% url 'logout' %}">Logout</a>
+</p>
+
+<br><br>
+
+<form action="" method="POST">
+    {% csrf_token %}
+    {{ form }}
+    <button type="submit">Save</button>
+</form>
+
+{% if todos %}
+    <table border="1">
+        <tr>
+            <th>ID</th>
+            <th>Title</th>
+            <th>Status</th>
+            <th></th>
+        </tr>
+        {% for todo in todos %}
+        <tr>
+            <td>{{ todo.id }}</td>
+            <td>{{ todo.title }}</td>
+            <td>{% if todo.completed == 1 %} completed {% else %} open {% endif %}</td>
+            <td>
+                {% if todo.completed == 0 %}
+                <a href="{% url 'mark_as_done' todo.id %}">Mark as done</a>
+                {% endif %}
+                <a href="{% url 'edit_todo' todo.id %}">Edit</a>
+                <form action="{% url 'todo' %}" method="POST" style="display: inline;">
+                    {% csrf_token %}
+                    <input type="hidden" name="_method" value="DELETE">
+                    <input type="hidden" name="id" value="{{ todo.id }}">
+                    <button type="submit">Delete</button>
+                </form>
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+{% endif %}
+
+
+<script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+
+<script>
+    $(document).ready(function() {
+        const select_field = $('#id_user');
+
+        if(select_field) {
+            select_field.val('{{ user_id }}');
+        }
+
+        return false;
+    });
+</script>

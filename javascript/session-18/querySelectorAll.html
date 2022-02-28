@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <p data="header">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit sit dolor nulla. Aut esse mollitia velit animi atque inventore quae sunt a, numquam maiores ut itaque, beatae tenetur, aliquid ratione?
+    </p>
+
+    <p data='footer'>
+        Lorem ipsum dolor sit amet.
+    </p>
+
+    <script>
+        
+        const pars = document.querySelectorAll('p');
+        // HTMLCollection
+
+        //console.log(typeof(pars));
+
+        pars.forEach(e => console.log(e.getAttribute('data')));
+
+    </script>
+
+</body>
+</html>

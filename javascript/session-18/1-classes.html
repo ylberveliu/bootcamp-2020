@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Classes | JavaScript</title>
+</head>
+<body>
+    <script>
+
+        class Student {
+            constructor(name, surname, ind, av_grade) {
+                this.name = name
+                this.surname = surname
+                this.ind = ind
+                this.av_grade = av_grade
+            }
+
+            getIndex() {
+                // console.log(this.ind);
+                return this.ind;
+            }
+
+            static address() {
+                console.log("Po Box 100");
+            }
+        }
+
+        // const ylber = new Student("Ylber", "Veliu", "78/2020", 7.5);
+
+        // console.log(ylber);
+        // console.log(`Index: ${ylber.getIndex()}`);
+
+        Student.address(); 
+
+        // let Student = class {
+        //     constructor(name, surname, ind, av_grade) {
+        //         this.name = name
+        //         this.surname = surname
+        //         this.ind = ind
+        //         this.av_grade = av_grade
+        //     }
+        // }
+
+        // const arlind = new Student("Arlind", "Mustafa", "56/2019", 8);
+
+        // console.log(arlind);
+
+    </script>
+</body>
+</html>

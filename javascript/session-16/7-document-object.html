@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Object</title>
+</head>
+<body>
+    
+    <h1 id="welcome">Welcome home!</h1>
+
+
+    <a href="#">Home</a>
+    <a href="about.html">About</a>
+    <a href="#">Conatct</a>
+
+    <script>
+        let heading = document.getElementById('welcome');
+
+        let links = Array.prototype.slice.call(document.links);
+
+        let empty_links = links.filter(e => e.innerText == "About");
+
+        document.write(empty_links[0].innerText);
+
+
+        //console.log(heading.innerText);
+    </script>
+</body>
+</html>

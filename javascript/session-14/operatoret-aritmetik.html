@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operatoret aritmetik | JavaScript</title>
+</head>
+<body>
+    
+    <script type="text/javascript">
+        var x = 5, y = 10;
+        var plus = x + y;
+        var minus = x - y;
+        var shumezim = x * y;
+        var pjestim = x / y;
+        var mbetje = x % y; // x/y -> mbetjen
+     
+        document.write(plus);
+        document.write("<br />")
+        document.write(minus);
+        document.write("<br />")
+        document.write(shumezim);
+        document.write("<br />")
+        document.write(pjestim);
+        document.write("<br />");
+        document.write(61%10);
+        document.write("<br /><hr />");
+
+        /*
+        ++      post-increment pre-increment 
+                x++            ++x 
+
+        --      post-decrement pre-decrement 
+                x--            --x
+        
+        FUNCTIONS
+
+        pre-increment pre-decrement 
+        f(x) {
+            x+=1;
+            return x;
+        }
+
+        post-increment post-decrement
+        f(x) {
+            x+=1;
+        }
+
+        */
+
+        document.write(--x);
+
+        document.write("<br />------------<br />");
+        var a = 5;      // 5
+        a--;
+        b = a;          // 4
+
+        document.write(b); // 4
+        document.write("<br />------------<br />");
+
+        // x++; // postfix
+
+        // document.write(x);
+        // document.write("<br />");
+
+        // x--; // postfix
+
+        // document.write(x);
+
+        // document.write("<br /><hr />");
+
+        // ++x; // prefix
+
+        // document.write(x);
+        // document.write("<br />");
+
+
+        // --x; // prefix
+
+        // document.write(x);
+        // document.write("<br />");
+    </script>
+</body>
+</html>

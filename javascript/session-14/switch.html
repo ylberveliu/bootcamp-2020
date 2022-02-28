@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Condition SWITCH | JavaScript</title>
+</head>
+<body>
+    
+    <script type="text/javascript">
+            var name = "Tea";
+
+            switch(name) {
+                case "Blera":
+                    document.write("Une jam Blerta");
+                break;
+                case "Tea":
+                    document.write("Une jam Tea");
+                break;
+                case "Arta":
+                    document.write("Une jam Arta");
+                break;
+                default:
+                    document.write("Une nuk jam as Arta, as Tea, e as Blerta!");
+                break;
+            }
+
+
+            var nota = 6;
+            
+            document.write("Switch:");
+            switch(nota) {
+                case 6:
+                    document.write("<p style='color: green'>Nota juaj eshte 6</p>");
+                break;
+                case 7:
+                    document.write("<p style='color: green'>Nota juaj eshte 7</p>");
+                break;
+                case 8:
+                    document.write("<p style='color: green'>Nota juaj eshte 8</p>");
+                break;
+                case 9:
+                    document.write("<p style='color: green'>Nota juaj eshte 9</p>");
+                break;
+                case 10:
+                    document.write("<p style='color: green'>Nota juaj eshte 10</p>");
+                break;
+                default:
+                    document.write("<p style='color: red'>Nota ka vlere te gabuar!</p>");
+                break;
+            }
+
+
+            document.write("If:");
+            if(nota == 6) {
+                document.write("<p style='color: green'>Nota juaj eshte 6</p>");
+            } else if(nota == 7) {
+                document.write("<p style='color: green'>Nota juaj eshte 7</p>");
+            } else if(nota == 8) {
+                document.write("<p style='color: green'>Nota juaj eshte 8</p>");
+            } else if(nota == 9) {
+                document.write("<p style='color: green'>Nota juaj eshte 9</p>");
+            } else if(nota == 10) {
+                document.write("<p style='color: green'>Nota juaj eshte 10</p>");
+            } else {
+                document.write("<p style='color: red'>Nota ka vlere te gabuar!</p>");
+            }
+    </script>
+</body>
+</html>

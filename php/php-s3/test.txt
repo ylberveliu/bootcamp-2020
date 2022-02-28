@@ -1,0 +1,7 @@
+If this flag is set, for every occurring 
+match the appendant string offset will also 
+be returned. Note that this changes the 
+return value in an array where every element is 
+an array consisting of the matched string at offset 
+0 and its string 
+offset into subject at offset 1.

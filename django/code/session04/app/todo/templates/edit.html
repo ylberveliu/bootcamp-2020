@@ -1,0 +1,7 @@
+<form action="{% url 'todo' %}" method="POST">
+    {% csrf_token %}
+    {{ form }}
+    <input type="hidden" name="_method" value="PUT">
+    <input type="hidden" name="id" value="{{ todo.id }}">
+    <button type="submit">Save</button>
+</form>

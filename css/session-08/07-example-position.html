@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Example</title>
+    <style>
+        .box {
+            width: 200px;
+            /* margin: 60px auto; */
+            padding: 60px 30px;
+            background-color: lightyellow;
+
+            margin: 5px;
+            position: absolute;
+/* 
+            top: 0;
+            left: 0; */
+
+            float: left;
+        }
+
+        /* .box1 {
+            width: 300px;
+            padding: 60px 30px;
+            background-color: lightyellow;
+
+            margin: 5px;
+            position: relative;
+
+            float: right;
+        } */
+
+        h1 {
+            position: absolute;
+            top: 0px;
+            left: 50%;
+            margin-left: -62px;
+        }
+
+        /* span {
+            float: left;
+        } */
+
+        .clear {
+            clear: both;
+        }
+
+        /* .box-right {
+            right: 0px;
+        }
+
+        .box-first {
+            z-index: 
+        } */
+
+        .box-right {
+            width: 180px;
+        }
+
+        .box-first {
+            z-index: 1;
+        }
+
+        .box-last {
+            width: 320px;
+            z-index: 2;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="box box-first" style="background-color: red;">
+        <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sed, cumque quidem ad in quaerat, quasi sequi delectus, quas dignissimos mollitia optio eius. Repellat quis, debitis veritatis unde mollitia temporibus corporis.
+        </p>
+        <h1>Hello</h1>
+    </div>
+
+    <div class="box box-right" style="background-color: lime;">
+        <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sed, cumque quidem ad in quaerat, quasi sequi delectus, quas dignissimos mollitia optio eius. Repellat quis, debitis veritatis unde mollitia temporibus corporis.
+        </p>
+        <h1>World</h1>
+    </div>
+
+    <div class="box box-last" style="background-color: purple;">
+        <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sed, cumque quidem ad in quaerat, quasi sequi delectus, quas dignissimos mollitia optio eius. Repellat quis, debitis veritatis unde mollitia temporibus corporis.
+        </p>
+        <h1>World</h1>
+    </div>
+
+    <!-- <div class="clear"></div>
+
+    <span>
+        Welcome
+    </span> -->
+</body>
+</html>

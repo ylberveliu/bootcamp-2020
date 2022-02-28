@@ -1,0 +1,38 @@
+Session #4
+-----------------------------------
+[x] Object-oriented programming
+    [x] Class 
+    [x] Object
+    [x] Properties
+        [] private, protected, public
+    [x] Constants
+    [x] Methods
+        [x] Constructor
+        [x] Destructor
+        [x] Defining types
+        [x] setters & getters
+        [x] Final 
+        [x] Static
+        [x] Magic methods
+            [x] __toString()
+            [x] __set()
+            [x] __get()
+            [x] Overloading  __call()
+    [x] Inheritance
+        [x] Overriding
+    [x] Interfaces
+    [x] Abstract Classes
+    [x] Autoloading classes
+[x] Working with databases
+    [x] mysqli   * CRUD
+    [] PDO       * CRUD
+[] Web features
+    [] Sessions
+    [] Cookies
+    [] Working with forms
+        [] $_REQUEST
+        [] $_GET
+        [] $_POST
+    [] HTTP
+        [] Headers
+        [] Status codes

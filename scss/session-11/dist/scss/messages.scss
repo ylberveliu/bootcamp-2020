@@ -1,0 +1,29 @@
+%message-global {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 20px 0px;
+    color: #666;
+    border-radius: 6px;
+}
+
+.message {
+    @extend %message-global;
+}
+
+.warning {
+    color: #333;
+    background-color: rgb(202, 152, 43);
+}
+
+.info {
+    background-color: rgb(19, 142, 214);
+}
+
+.default {
+    background-color: rgb(178, 183, 185);
+}
+
+.danger {
+    color: white;
+    background-color: rgb(192, 61, 61);
+}

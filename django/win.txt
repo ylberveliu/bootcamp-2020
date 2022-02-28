@@ -1,0 +1,12 @@
+1. Te instalohet Python
+2. Nga rreshti i kompandave e ekzekuton skripten: pip install virtualenv
+3. mkdir hello-world
+4. cd hello-world
+5. virtualenv venv
+6. set venv/Scripts/active
+7. pip install django
+8. python manage.py startproject app
+9. python manage.py startapp todo
+10. python manage.py runserver
+
+127.0.0.1:8000/todo

@@ -1,0 +1,20 @@
+Session #5
+-----------------------------------
+[x] Flask Web Framework
+    [x] Working with forms
+        [x] Accessing data
+            [x] Method GET
+            [x] Method POST
+        [x] Validation
+    [x] Controlling state
+        [x] Sessions
+        [x] Cookies
+    [x] Redirection
+    [x] Dealing with errors
+        [x] Display 
+        [x] Log 
+    [x] Working with databases 
+        [x] Connection (sqlite)
+        [x] CRUD operations
+        [x] Searching
+[] Exercises

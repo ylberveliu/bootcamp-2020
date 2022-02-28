@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attribute selectors | CSS</title>
+    <style>
+        p {
+            margin-bottom: 30px;
+        }
+
+
+        ELEMENT[ATTRIBUTE(SYMBOL)="VALUE"]
+
+        /* Attribute selectors */
+        p[class] {
+            color: yellowgreen;
+        }
+
+        h1[class="title"] {
+            color: purple;
+        }
+
+        p[class~="center"] {
+            color: orange;
+            /* text-indent: 50px; */
+        }
+
+        p[data^="la"] {
+            text-align: center;
+            font-style: italic;
+            font-size: 20px;
+        }
+
+        p[data*="st"] {
+            text-transform: uppercase;
+        }
+
+        h1[data*="stfi"] {
+            color: red;
+            text-transform: capitalize;
+        }
+
+        p[data$="st"] {
+            color: gray;
+        }
+
+        h1[class|="heading"] {
+            color: purple;
+        }
+    </style>
+</head>
+<body>
+
+    <h1 class="heading-title" data="pastlastfirst">Lorem ipsum dolor sit</h1>
+    
+    <p data="first">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor, laborum beatae magnam vitae totam inventore explicabo enim reiciendis quo, veritatis, vero laboriosam porro sint eligendi! Cumque corporis ut nobis ea.
+    </p>
+
+    <p class="dog">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Id maiores unde deleniti hic praesentium obcaecati tempore veritatis beatae fugit similique ullam soluta numquam impedit, laborum blanditiis distinctio voluptatum saepe illum?
+    </p>
+
+    <h1>Lorem ipsum, dolor sit</h1>
+
+    <p class="last red center" data="last">
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolorum, excepturi. Esse omnis deserunt sapiente necessitatibus nostrum ad aliquam blanditiis sed eius asperiores tenetur itaque minima exercitationem quam, at voluptate temporibus?
+    </p>
+
+</body>
+</html>

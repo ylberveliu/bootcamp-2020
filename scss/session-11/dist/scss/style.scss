@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
+@import 'mixins';
+@import 'nav';
+
+$body-bg-color: aquamarine;
+$headings-font: 'Lobster', cursive;
+$main-width: 600px;
+
+
+
+body {
+    background-color: $body-bg-color;
+    margin: 0px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: $headings-font;
+}
+
+.container {
+    width: 100%;
+}
+
+
+
+
+article[role="main"] {
+    position: relative;
+    float: left;
+    width: $main-width / 960px * 100%;
+
+    &:hover {
+        background-color: red;
+    }
+
+    h1 {
+        @include transform(rotate(5deg));
+    }
+}
+
+article[role="complementary"] {
+    position: relative;
+    float: left;
+    box-sizing: border-box;
+    width: 300px / 960px * 100%;
+    background-color: lightcyan;
+    padding: 20px;
+
+    @include transform(rotate(5deg));
+}

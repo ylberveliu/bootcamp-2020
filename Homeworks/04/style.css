@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
+
+body {
+    margin: 80px 80px;
+    background-color: antiquewhite;
+}
+
+h1, h2 {
+    text-align: center;
+    font-family: 'Dancing Script', cursive;
+}
+
+h1 {
+    font-size: 48px;
+}
+
+h2 {
+    font-size: 38px;
+}
+
+a {
+    color: #fe7095;
+}
+
+.content,
+.content p {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.content a {
+    color: #fff;
+    text-decoration: none;
+    background-color: #fe7095;
+    padding: 8px 20px;
+}
+
+#how-to-prepare {
+    margin-top: 40px;
+}

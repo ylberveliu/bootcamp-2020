@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variable Scope</title>
+</head>
+<body>
+    
+    <script>
+        // let x = 101; // globale
+
+        // console.log(x);
+
+        // function f() {
+        //     let y = 10; // local
+        //     document.write(x + " - " + y);
+        // }
+
+        // f(); // thirrja (aktivizimi) i funksionit
+
+        // console.log(y);
+
+        function outer() {
+            let i = 200;
+
+            function inner() {
+                let j = 150;
+                document.write(i + " - " + j);
+            }
+
+            // return inner();
+            outer.inner = inner;
+        }
+
+        outer();
+        outer.inner();
+    </script>
+</body>
+</html>

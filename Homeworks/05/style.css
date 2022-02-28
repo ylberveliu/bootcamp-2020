@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap'); 
+
+body {
+    margin: 0px;
+}
+
+
+.header {
+    height: 380px;
+    background-color: blanchedalmond;
+}
+
+    .header .image,
+    .header .description {
+        width: 50%;
+        height: 380px;
+        box-sizing: border-box;
+        position: relative;
+        float: left;
+    }
+
+    .header .image {
+        background: url('images/office.jpg') 100% no-repeat;
+    }
+
+    .header .description {
+        background-color: lightgray;
+        padding: 80px 60px;
+    }
+
+    .header .description h1 {
+        color: #666;
+        font-family: 'Dancing Script', cursive;
+    }
+
+    .header .description p {
+        color: #666;
+        text-align: justify;
+    }
+
+
+.content {
+    clear: left;
+
+    width: 960px;
+    margin: 60px auto;
+}
+
+    .content p {
+        line-height: 22px;
+        padding-bottom: 5px;
+        text-align: justify;
+    }

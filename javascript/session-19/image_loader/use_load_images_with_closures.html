@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Load Images | Closures</title>
+</head>
+<body>
+    <script type="module">
+        import loadImage from './modules/load_images_with_closures.js';
+
+        const displayImage = (src) => {
+            let image = document.createElement('img');
+            image.setAttribute('src', src);
+            image.setAttribute('height', '120px');
+            document.body.appendChild(image);
+        }
+
+        loadImage('img1.jpg', (err, img1) => {
+            if(err) document.write(err);
+            displayImage(img1.src);
+
+            loadImage('img2.jpeg', (err, img2) => {
+                    if(err) document.write(err);
+                    displayImage(img2.src);
+
+                    loadImage('img3.jpeg', (err, img3) => {
+                        if(err) document.write(err);
+                        displayImage(img3.src);
+                    });
+            });
+        });
+    </script>
+</body>
+</html>

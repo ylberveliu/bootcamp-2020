@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>this Identifier | JavaScript</title>
+</head>
+<body>
+
+    <button id="btn">Button</button>
+
+    <p id="par">Paragraph</p>
+
+    <script>
+        // "use strict"
+
+        // 1. this in a method 
+        // const s = {
+        //     name: "Ylber",
+        //     surname: "Veliu",
+        //     fullname: function() {
+        //         return this.name + " " + this.surname;
+        //     }
+        // }
+
+        // console.log(s.fullname());
+
+        // 2.this alone 
+        // console.log(this); // [Window]
+
+
+        // 3.this alone (strict)
+        //console.log(this); // [Window]
+
+        // 4. this in a function  (strict)
+        // function whatsThisInF() {
+        //     return this;
+        // }
+
+        // console.log(whatsThisInF()); 
+
+        // 5. this in a function 
+        // function whatsThisInF() {
+        //     return this;
+        // }
+
+        // console.log(whatsThisInF());  // Window
+
+        // 6. this identifier (Event Handlers)
+        document.getElementById('btn').addEventListener('click', function(e) {
+            console.log(this);
+        }); // element: <button id="btn">Button</button>
+
+        document.getElementById('par').addEventListener('click', function(e) {
+            console.log(this);
+        }); // element: <p id="par">Paragraph</p>
+
+        let p1 = {
+            fullName: function() {
+                return this.name + " " + this.surname;
+            }
+        };
+
+        let p2 = {
+            name: "Ylber", 
+            surname: "Veliu"
+        };
+
+        let x = p1.fullName.call(p2);
+
+        console.log(x); // Ylber Veliu
+    </script>
+</body>
+</html>
