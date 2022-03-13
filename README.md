@@ -1,5 +1,6 @@
 # Bootcamp '20
-### Full-stack PHP Developer
-### Full-stack Python Developer
+## Full-stack PHP/Python Developer
 
-Read more: [Full-Stack Developer Bootcamp](https://bootcamp.perprogramera.com/)
+Watch lectures for free on my [YouTube channel](https://studio.youtube.com/channel/UCyfSSH7PXpYV7nrO9A9-UMQ)
+
+Join us: [Full-Stack Developer Bootcamp](https://bootcamp.perprogramera.com/)
